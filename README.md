@@ -6,7 +6,7 @@
 - Sring Boot DevTools
 - Lombok
 - Spring Data JPA
-- MariaDB Driver
+- Mysql Driver
 - Spring Security
 - Spring Web
 - oauth2-client
@@ -35,8 +35,8 @@
 ### 데이터베이스
 
 ```sql
-create user 'cos'@'%' identified by 'cos1234';
-GRANT ALL PRIVILEGES ON *.* TO 'cos'@'%';
+create user 'insta'@'%' identified by 'insta1234';
+GRANT ALL PRIVILEGES ON *.* TO 'insta'@'%';
 create database photogram;
 ```
 
@@ -58,15 +58,15 @@ spring:
       suffix: .jsp
       
   datasource:
-    driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/cos?serverTimezone=Asia/Seoul
-    username: cos
-    password: cos1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/photogram?serverTimezone=Asia/Seoul
+    username: insta
+    password: insta1234
     
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
@@ -82,7 +82,8 @@ spring:
       password: 1234   
 
 file:
-  path: C:/src/springbootwork-sts/upload/
+  path: /Users/young/git/upload
+
 ```
 
 ### 태그라이브러리
