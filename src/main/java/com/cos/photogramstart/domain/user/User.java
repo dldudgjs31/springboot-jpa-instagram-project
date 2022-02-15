@@ -11,8 +11,11 @@ import javax.persistence.PrePersist;
 
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+@Builder
 @NoArgsConstructor // 파라미터 없는 기본 생성자
 @AllArgsConstructor // 모든 필드값을 받는 생성자
 @Data
