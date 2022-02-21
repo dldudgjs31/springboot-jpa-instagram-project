@@ -48,12 +48,12 @@ public class AuthController {
      */
     @PostMapping(value="/auth/signup")
     public String signup(SignupRequestDTO signupRequestDTO) {
-        log.info(signupRequestDTO.toString());
+
 
         //User <- SignupDto
         User user = signupRequestDTO.toEntity();
         User userEntity = authService.signup(user);
-        log.info(user.toString());
+
 
         return "auth/signin";
     }
