@@ -57,15 +57,7 @@ public class AuthController {
      * @return 로그인 페이지
      */
     @PostMapping(value="/auth/signup")
-    public String signup(
-                                    @Valid SignupRequestDTO signupRequestDTO, 
-                                    BindingResult bindingResult) 
-        {
-        System.out.println("#################################################################");
-        System.out.println("#################################################################");
-        System.out.println(bindingResult);
-        System.out.println(bindingResult.hasErrors());
-        System.out.println(signupRequestDTO);
+    public String signup(@Valid SignupRequestDTO signupRequestDTO,BindingResult bindingResult) {
         if(bindingResult.hasErrors()){
             Map<String,String> errorMap = new HashMap<>();
 
