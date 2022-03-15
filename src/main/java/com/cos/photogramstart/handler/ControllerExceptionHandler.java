@@ -18,8 +18,8 @@ public class ControllerExceptionHandler {
     @ExceptionHandler(CustomValidationException.class)
     public CRMRespDto<?> validationException(CustomValidationException e){
         return new CRMRespDto<Map<String,String>>(-1,e.getMessage(),e.getErrorMap());
-    }*/
-
+    }
+*/
     /**
      * 예외처리 상황에서 스크립트로 응답
      * 1. 클라이언트 응답시엔 script

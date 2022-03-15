@@ -76,7 +76,9 @@ public class PrincipalDetails implements UserDetails{
         // TODO Auto-generated method stub
         return true;
     }
-
+    /**
+     * 계정 활성화 여부 확인
+     */
     @Override
     public boolean isEnabled() {
         // TODO Auto-generated method stub
